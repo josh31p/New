@@ -1,0 +1,51 @@
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+  xmlns:s="library://ns.adobe.com/flex/spark" 
+  xmlns:mx="library://ns.adobe.com/flex/mx"
+  backgroundColor="#1E5C75">
+  <fx:Script>
+    <![CDATA[
+      import flash.text.engine.FontPosture;
+    ]]>
+  </fx:Script>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace mx "library://ns.adobe.com/flex/mx";
+		
+		s|Label {
+			fontSize:20;
+			fontFamily:Verdana;
+		}
+		
+		s|BorderContainer{
+			backgroundColor:#6DB6C6;
+				borderStyle:inset;
+				borderColor:#84CBDA;
+				borderWeight:10;
+				cornerRadius:15; 
+				dropShadowVisible:true;
+			
+		}
+	</fx:Style>
+  <s:BorderContainer x="10" y="10">
+    <s:layout>
+      <s:VerticalLayout paddingBottom="20" paddingLeft="20" paddingRight="20"
+        paddingTop="20"/>
+    </s:layout>
+    <mx:Image source="@Embed('assets/FlashLogo.swf')" width="156" height="96"/>
+  </s:BorderContainer>
+  <s:BorderContainer horizontalCenter="0" verticalCenter="0"
+    width="400">
+    <s:layout>
+      <s:VerticalLayout paddingBottom="20" paddingLeft="50" paddingRight="50"
+        paddingTop="20"/>
+    </s:layout>
+    <s:Label text="Label 1" fontSize="24" fontStyle="{FontPosture.ITALIC}"/>
+    <s:Label text="Label 2"/>
+    <s:Label text="Label 3"/>
+    <s:Label text="Label 4"/>
+    <s:Label text="Label 5"/>
+    <s:Label text="Label 6"/>
+  </s:BorderContainer> 
+  <s:BitmapImage source="@Embed('assets/flowers.png')" 
+    width="165" height="171" right="0" bottom="0"/>
+</s:Application>

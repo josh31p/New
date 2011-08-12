@@ -1,0 +1,56 @@
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+  xmlns:s="library://ns.adobe.com/flex/spark" 
+  xmlns:mx="library://ns.adobe.com/flex/mx"
+  backgroundColor="#1E5C75">
+  <fx:Style>
+    @namespace s "library://ns.adobe.com/flex/spark";
+    @namespace mx "library://ns.adobe.com/flex/mx";
+    
+	  global{
+		 fontFamily:_typewriter; 
+	  }
+	  
+	  s|panel s|Label {
+		  textDecoration:underline;
+	  }
+	  
+    s|Button, s|TextInput {
+      font-size:18;
+      color:red;
+    }
+    s|SkinnableTextBase {
+      content-background-color:aqua;
+    }
+    .blueText {
+      color:#0000FF;
+    }
+    #button3 {
+      font-style:italic;
+      text-decoration:underline;
+    }
+    
+  </fx:Style>
+  <s:BorderContainer backgroundColor="#6DB6C6"
+    borderColor="#84CBDA" borderWeight="10"
+    cornerRadius="15" dropShadowVisible="true" 
+    horizontalCenter="0" verticalCenter="0"
+    width="400">
+    <s:layout>
+      <s:VerticalLayout paddingBottom="20" paddingLeft="50" paddingRight="50"
+        paddingTop="20"/>
+    </s:layout>
+    <s:Button label="Button 1"/>
+    <s:Button label="Button 2" styleName="blueText"/>
+    <s:Button id="button3" label="Button 3"/>
+    <s:Panel title="A Panel">
+      <s:layout>
+        <s:VerticalLayout paddingTop="10" paddingBottom="10"
+          paddingLeft="10" paddingRight="10"/>
+      </s:layout>
+      <s:Label text="Label 1"/>
+      <s:Label text="Label 2"/>
+      <s:TextInput text="A Text Input"/>
+      <s:TextArea text="A Text Area"/>
+    </s:Panel>
+  </s:BorderContainer>
+</s:Application>

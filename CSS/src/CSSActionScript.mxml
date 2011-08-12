@@ -1,0 +1,47 @@
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+  xmlns:s="library://ns.adobe.com/flex/spark" 
+  xmlns:mx="library://ns.adobe.com/flex/mx"
+  backgroundColor="#1E5C75">
+  <fx:Style>
+    @namespace s "library://ns.adobe.com/flex/spark";
+    @namespace mx "library://ns.adobe.com/flex/mx";
+    
+    s|Button
+    {
+      fontFamily: verdana;
+      fontSize: 14;
+    }
+  </fx:Style>
+	
+	<fx:Script>
+		<![CDATA[
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				myLabel.setStyle("fontSize",24);
+				
+			}
+		]]>
+	</fx:Script>
+	
+	
+  <s:BorderContainer backgroundColor="#6DB6C6"
+    borderColor="#84CBDA" borderWeight="10"
+    cornerRadius="15" dropShadowVisible="true" 
+    horizontalCenter="0" verticalCenter="0"
+    width="400">
+    <s:layout>
+      <s:VerticalLayout paddingBottom="20" paddingLeft="50" paddingRight="50"
+        paddingTop="20"/>
+    </s:layout>
+    <s:Button label="Set Control Style" click="button1_clickHandler(event)"/>
+    <s:Button label="Set Style Name"/>
+    <s:Panel title="Labels">
+      <s:layout>
+        <s:VerticalLayout paddingTop="10" paddingBottom="10"
+          paddingLeft="10" paddingRight="10"/>
+      </s:layout>
+      <s:Label id="myLabel" text="Single Label"/>
+      <s:Label id="redLabel" text="Red Label"/>
+    </s:Panel>
+  </s:BorderContainer>
+</s:Application>
